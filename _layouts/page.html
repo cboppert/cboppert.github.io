@@ -3,23 +3,20 @@
 <html lang="en">
    <head>
       <meta charset="utf-8">
-      <title></title>
+      <title>{{ title }}</title>
 
-      <meta name="description" content="">
-      <meta name="developer" content="">
+      <meta name="description" content="{{description}}">
+      <meta name="developer" content="{{developer}}">
 
       <!--[if lt IE 9]>
          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
       -->
    </head>
    <body>
-      
+      {{ include header.html }}
 
-      <div>
-   <p>Hello World</p>
-</div>
+      {{ content }}
 
-
-      
+      {{ include footer.html }}
    </body>
 </html>
