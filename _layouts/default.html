@@ -3,20 +3,20 @@
 <html lang="en">
    <head>
       <meta charset="utf-8">
-      <title>{{ title }}</title>
+      <title>{{ page.title }}</title>
 
-      <meta name="description" content="{{description}}">
-      <meta name="developer" content="{{developer}}">
+      <meta name="description" content="{{page.description}}">
+      <meta name="developer" content="{{page.developer}}">
 
       <!--[if lt IE 9]>
          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
       -->
    </head>
    <body>
-      {{ include header.html }}
+      {% include header.html %}
 
       {{ content }}
 
-      {{ include footer.html }}
+      {% include footer.html %}
    </body>
 </html>

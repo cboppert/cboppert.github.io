@@ -1,0 +1,43 @@
+---
+layout: page
+title: Warrior Within Yoga Classes
+---
+
+<link rel="stylesheet" type="text/css" href="css/classes.css">
+<ul class="class-list">
+   {% for yogaClass in site.data.classes %}
+   <li>
+      <div class="row">
+         <div class="class-title">
+            <h1>{{ yogaClass.title }}</h1>
+         </div>
+      </div>
+      <div class="row">
+         <div class="class-image radius"><img class="class-image" src="{{ yogaClass.picture }}" alt="{{ yogaClass.pictureDescription }}"></div>
+         <div class="class-description">
+            <p>{{ yogaClass.description }}</p>
+         </div>
+      </div>
+      <div class="row">
+         <div class="class-instructor">
+            <p>{{ yogaClass.instructor }}</p>
+         </div>
+         <div class="class-price">
+            <p>{{ yogaClass.price }}</p>
+         </div>
+      </div>
+      <div class="row">
+         <div class="class-schedule">
+            <ul class="class-schedule">
+            {% for time in yogaClass.times %}
+               <li class="class-schedule">
+                  <div class="class-schedule-day">{{ time.day }}</div>
+                  <div class="class-schedule-time">{{ time.time }}</div>
+               </li>
+            {% endfor %}
+            </ul>
+         </div>
+      </div>
+   </li>
+   {% endfor %}
+</ul>
