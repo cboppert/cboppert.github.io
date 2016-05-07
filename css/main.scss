@@ -1,0 +1,14 @@
+---
+
+---
+
+body {
+   background-color: rgba(228, 222, 226, 0.65);
+}
+
+div.flex-row {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+}

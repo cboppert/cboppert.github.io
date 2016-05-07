@@ -1,9 +1,12 @@
 ---
 layout: page
 title: Warrior Within Yoga Classes
+style: classes
+developer: Cody Boppert
+description: Warrior Within Yoga Classes with description, insstructor, price, and times
+url: classes
 ---
 
-<link rel="stylesheet" type="text/css" href="css/classes.css">
 <ul class="class-list">
    {% for yogaClass in site.data.classes %}
    <li>
@@ -13,29 +16,30 @@ title: Warrior Within Yoga Classes
          </div>
       </div>
       <div class="row">
-         <div class="class-image radius"><img class="class-image" src="{{ yogaClass.picture }}" alt="{{ yogaClass.pictureDescription }}"></div>
-         <div class="class-description">
-            <p>{{ yogaClass.description }}</p>
+         <div class="class-image radius column row"><img class="class-image" src="{{ yogaClass.picture }}" alt="{{ yogaClass.pictureDescription }}"></div>
+
+         <div class="column row">
+            <div class="row class-description">
+               <p>{{ yogaClass.description }}</p>
+            </div>
+            <div class="row class-schedule">
+               <ul class="class-schedule">
+               {% for time in yogaClass.times %}
+                  <li class="class-schedule">
+                     <div class="class-schedule-day">{{ time.day }}</div>
+                     <div class="class-schedule-time">{{ time.time }}</div>
+                  </li>
+               {% endfor %}
+               </ul>
+            </div>
          </div>
       </div>
       <div class="row">
-         <div class="class-instructor">
-            <p>{{ yogaClass.instructor }}</p>
+         <div class="class-instructor column row">
+            <p>Instructor: <a href="/instructors.html#{{ yogaClass.instructor }}">{{ yogaClass.instructor }}</a></p>
          </div>
-         <div class="class-price">
-            <p>{{ yogaClass.price }}</p>
-         </div>
-      </div>
-      <div class="row">
-         <div class="class-schedule">
-            <ul class="class-schedule">
-            {% for time in yogaClass.times %}
-               <li class="class-schedule">
-                  <div class="class-schedule-day">{{ time.day }}</div>
-                  <div class="class-schedule-time">{{ time.time }}</div>
-               </li>
-            {% endfor %}
-            </ul>
+         <div class="class-price column row">
+            <p>Price: ${{ yogaClass.price }}</p>
          </div>
       </div>
    </li>
