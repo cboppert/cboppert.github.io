@@ -2,6 +2,21 @@
 
 ---
 
+ul.class-list {
+   li:first-child div.yoga-class {
+      padding-top: 1em;
+   }
+
+   li:last-child div.yoga-class {
+      padding-bottom: 1em;
+   }
+}
+
+div.yoga-class {
+   padding: 1.5rem 7rem;
+}
+
+// Class image
 div.radius {
    -webkit-border-radius: 25px;
    -moz-border-radius: 25px;
@@ -9,29 +24,35 @@ div.radius {
 
    height: 20rem;
    width: 20rem;
-   background: url(../images/sun.jpg);
+   background-size: 20rem 20rem;
 }
 
-img.class-image {
-   display: none;
+// Class body
+div.class-body {
    height: 20rem;
-   width: 20rem;
+   padding-left: 1rem;
 }
 
-// Layout
-div.row {
+div.class-body-column {
+   width: 85%;
+}
+
+// Schedule
+ul.class-schedule {
    width: 100%;
+   padding-left: 0;
 
-   display: flex;
-   justify-content: center;
-   align-items: center;
+   list-style: none;
 }
 
-div.column {
-   height: 100%;
+li.class-schedule {
+   width: 100%;
+}
 
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+div.class-schedule-day {
+   width: 50%;
+}
+
+div.class-schedule-time {
+   width: 50%;
 }

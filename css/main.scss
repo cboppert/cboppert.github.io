@@ -6,9 +6,41 @@ body {
    background-color: rgba(228, 222, 226, 0.65);
 }
 
+// Layout
 div.flex-row {
+   width: 100%;
+
    display: flex;
    flex-direction: row;
-   flex-wrap: wrap;
+}
+
+div.flex-column {
+   height: 100%;
+
+   display: flex;
+   flex-direction: column;
+}
+
+div.justify-center {
    justify-content: center;
+}
+
+div.justify-left {
+   justify-content: left;
+}
+
+div.justify-right {
+   justify-content: right;
+}
+
+div.align-center {
+   align-items: center;
+}
+
+div.align-top {
+   align-items: top;
+}
+
+div.align-bottom {
+   align-items: bottom;
 }

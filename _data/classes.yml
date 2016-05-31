@@ -4,6 +4,7 @@
    picture: images/sun.jpg
    pictureDescription: Brash in the Sun
    instructor: Michael Brash
+   breaks: meditation-pranayama
    times:
       -
          day: Sunday
@@ -22,9 +23,10 @@
 -
    title: Morning Yoga/Sun Salutation
    price: 20
-   picture: images/sun.jpg
+   picture: images/flowers.jpg
    pictureDescription: Brash in the Sun
    instructor: Michael Brash
+   breaks: morning-yoga
    times:
       -
          day: Sunday
@@ -43,9 +45,10 @@
 -
    title: Vinyasa (All Levels)
    price: 20
-   picture: images/sun.jpg
+   picture: images/group.jpg
    pictureDescription: Brash in the Sun
    instructor: Michael Brash
+   breaks: vinyasa-all
    times:
       -
          day: Sunday
@@ -64,24 +67,26 @@
 -
    title: 'Crystal & Tibetan Bowl Sound Healing Meditation'
    price: 20
-   picture: images/sun.jpg
+   picture: images/lobby.jpg
    pictureDescription: Brash in the Sun
    instructor: Michael Brash
+   breaks: tibetan-bowl
    times:
       -
          day: Sunday
          time: 12
       -
          day: Monday
-         time: 1
+         time: 13
    description: 'Come heal your body and mind with gentle and deep vibrations from the crystal and tibetan bowls.'
 
 -
    title: 'Warrior Within Yoga (Level 1)'
    price: 20
-   picture: images/sun.jpg
+   picture: images/neon.jpg
    pictureDescription: Brash in the Sun
    instructor: Michael Brash
+   breaks: warrior-within-one
    times:
       -
          day: Monday
@@ -97,9 +102,10 @@
 -
    title: 'Warrior Within Yoga (Level 2)'
    price: 20
-   picture: images/sun.jpg
+   picture: images/point.jpg
    pictureDescription: Brash in the Sun
    instructor: Michael Brash
+   breaks: warrior-within-two
    times:
       -
          day: Sunday
@@ -109,9 +115,10 @@
 -
    title: 'Beginner AcroYoga Fundamentals'
    price: 20
-   picture: images/sun.jpg
+   picture: images/rock.jpg
    pictureDescription: Brash in the Sun
    instructor: Michael Brash
+   breaks: beginner-acro
    times:
       -
          day: Sunday
@@ -130,9 +137,10 @@
 -
    title: 'Acroyoga Therapeutics/Thai Massage'
    price: 20
-   picture: images/sun.jpg
+   picture: images/spiral.jpg
    pictureDescription: Brash in the Sun
    instructor: Michael Brash
+   breaks: acro-therapeutics
    times:
       -
          day: Sunday
@@ -142,9 +150,10 @@
 -
    title: 'Restorative/Yin Yoga'
    price: 20
-   picture: images/sun.jpg
+   picture: images/spread.jpg
    pictureDescription: Brash in the Sun
    instructor: Michael Brash
+   breaks: yin-yoga
    times:
       -
          day: Monday
@@ -163,9 +172,10 @@
 -
    title: 'Acroyoga Open Jam'
    price: 20
-   picture: images/sun.jpg
+   picture: images/stand.jpg
    pictureDescription: Brash in the Sun
    instructor: Michael Brash
+   breaks: acro-open
    times:
       -
          day: Sunday
@@ -178,9 +188,10 @@
 -
    title: 'Kids Yoga'
    price: 20
-   picture: images/sun.jpg
+   picture: images/studio.jpg
    pictureDescription: Brash in the Sun
    instructor: Michael Brash
+   breaks: kids-yoga
    times:
       -
          day: Monday

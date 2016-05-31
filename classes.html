@@ -10,36 +10,47 @@ url: classes
 <ul class="class-list">
    {% for yogaClass in site.data.classes %}
    <li>
-      <div class="row">
-         <div class="class-title">
-            <h1>{{ yogaClass.title }}</h1>
-         </div>
-      </div>
-      <div class="row">
-         <div class="class-image radius column row"><img class="class-image" src="{{ yogaClass.picture }}" alt="{{ yogaClass.pictureDescription }}"></div>
+      <a name="#{{yogaClass.breaks}}"></a>
+      <div class="yoga-class flex-column justify-center align-center">
+         <div class="flex-row justify-center align-center">
+            <div class="class-image radius flex-column flex-row justify-center align-center" style="background-image: url('{{yogaClass.picture}}')"></div>
 
-         <div class="column row">
-            <div class="row class-description">
-               <p>{{ yogaClass.description }}</p>
+            <div class="class-body flex-column flex-row justify-center align-center">
+               <div class="class-body-column flex-column justify-center">
+                  <div class="flex-row justify-center align-center">
+                     <div class="class-title">
+                        <h1>{{ yogaClass.title }}</h1>
+                     </div>
+                  </div>
+
+                  <div class="class-description flex-row justify-center align-center">
+                     <p>{{ yogaClass.description }}</p>
+                  </div>
+                  <div class="class-schedule flex-row justify-center align-center">
+                     <ul class="class-schedule">
+                     {% for time in yogaClass.times %}
+                        <li class="class-schedule">
+                           <div class="flex-row">
+                              <div class="class-schedule-day flex-column justify-center align-center">{{ time.day }}</div>
+                              <div class="class-schedule-time flex-column justify-center align-center">
+                                 {% if time.time >= 12 %}{{ time.time | minus:12 }}PM {% else %}{{ time.time }}AM{% endif %}
+                              </div>
+                           </div>
+                        </li>
+                     {% endfor %}
+                     </ul>
+                  </div>
+
+                  <div class="flex-row justify-center align-center">
+                     <div class="class-instructor flex-column flex-row justify-center align-center">
+                        <p>Instructor: <a href="/instructors.html#{{ yogaClass.instructor }}">{{ yogaClass.instructor }}</a></p>
+                     </div>
+                     <div class="class-price flex-column flex-row justify-center align-center">
+                        <p>Price: ${{ yogaClass.price }}</p>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="row class-schedule">
-               <ul class="class-schedule">
-               {% for time in yogaClass.times %}
-                  <li class="class-schedule">
-                     <div class="class-schedule-day">{{ time.day }}</div>
-                     <div class="class-schedule-time">{{ time.time }}</div>
-                  </li>
-               {% endfor %}
-               </ul>
-            </div>
-         </div>
-      </div>
-      <div class="row">
-         <div class="class-instructor column row">
-            <p>Instructor: <a href="/instructors.html#{{ yogaClass.instructor }}">{{ yogaClass.instructor }}</a></p>
-         </div>
-         <div class="class-price column row">
-            <p>Price: ${{ yogaClass.price }}</p>
          </div>
       </div>
    </li>
